@@ -1,17 +1,18 @@
-name: breadcrumb
-author:
-  name: Divyendra M
-  googleplus: https://google.com/+DivyendraM/
-  
+# General Jekyll Config
+url: http://example.com
+lsi: false
+exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 
-paginate: 5
+# Build settings
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
 
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables"]
+permalink: pretty
+highlighter: rouge
 
-relative_permalinks: false
-permalink: /:year/:month/:title.html
-
-exclude: ['README.md', 'LICENSE.txt']
+kramdown:
+  auto_ids: true
+  input: GFM
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
