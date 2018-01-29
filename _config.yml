@@ -4,7 +4,7 @@ lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 
 # Build settings
-markdown: kramdown
+markdown: kramdown 
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 
 permalink: pretty
@@ -16,3 +16,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+
+collections:
+  reports:
+    foo: bar
