@@ -23,8 +23,8 @@ For a batch of 'n' examples classified over 'm' classes, the Student loss would 
 
 For all i to batch_n: <br/>
 $\qquad$  StudentLoss(i) $+=$ CEloss(i) $+$ KLloss(i) <br/>
-where KLloss is the KLdivergence between between teacher's output distribution, $p_t$ and the student's output distribution, $p_s$: 
-$KLloss_{i}(p_{t}||p_{s}) = \Sigma_{m=1}^{m} P_{t}^{m}(x_{i})*log(\frac{P_{t}^{m}(x_{i})}{P_{s}^{m}(x_{i})})$ <br/>
+where KLloss is the KLdivergence between between teacher's output distribution, $p_t$ and the student's output distribution, $p_s$:
+$$KLloss_{i}(p_{t} \vert \vert p_{s})=\Sigma_{m=1}^{m} P_{t}^{m}(x_{i})*log(\frac{P_{t}^{m}(x_{i})}{P_{s}^{m}(x_{i})})$$ <br/>
 *QuickNote*: Loss functions donot use a size average formulation for effective gradient flow in deep networks.
 
 This technique worked well in many instances although it depends partly on a suitable student network architecture. The student network needed just a smaller number of training examples to learn as it is reliant on stronger, smoother classifier. One such instance where is transfer learning technique is used is \[[3][crossdistill]\] where knowledge from a strong coloured image classifier(Image net) is used to train a Depth classifier net overcoming the dearth in depth images training set problem.
