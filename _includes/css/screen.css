@@ -152,14 +152,27 @@ ul.posts span {
   width: 100%;
   text-align: center;
   display: inline-block;
-  border-radius: 1px;
+  border-radius: 2px;
   margin-top: -2px;
   font-family: 'Lucida Console', 'Andale Mono', monospace;
   color: #fff;
-  padding: .5em 0;
+  padding: .5em;
   font-size: 14px;
   background: {{ site.data.theme.highlight_color }};
 }
+
+.special-heading {
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 0px;
+  font-family: 'Lucida Console', 'Andale Mono', monospace;
+  color: #fff;
+  padding: .5em;
+  font-size: 14px;
+  background: {{ site.data.theme.highlight_color_dark }};
+}
+
 
 .post-title a {
   color: #222;

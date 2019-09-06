@@ -56,6 +56,11 @@
   h1 {
     font-size: 28px; line-height: 36px;
   }
+  
+  .special-heading {
+    display: none;
+  }
+
 }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
@@ -71,4 +76,9 @@
   h2 {
     font-size: 22px; line-height: 24px;
   }
+
+  .special-heading {
+    display: none;
+  }
+
 }

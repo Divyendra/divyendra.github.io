@@ -2,6 +2,7 @@
 
 # Color for fa-icons, links, etc
 highlight_color: '#3498db'
+highlight_color_dark: '#64beff'
 
 # Disqus configuration (provide short name - disabled if not provided)
 disqus_shortname:
