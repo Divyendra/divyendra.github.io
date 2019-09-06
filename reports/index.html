@@ -1,27 +1,26 @@
 ---
 layout: default
-title: Reports
-id: 'reports/index'
+title: Blog Posts
+use_math: true
 ---
-<header><h2 class="special-heading">Publications and Research work</h2></header>
-
+<!--home-->
 <div id="home">
   <div style="margin:2em"></div>
-  {% for post in site.reports %}
+  {% for post in site.posts %}
       <!--<li><span>{{ post.date | date_to_string }} &raquo;</span><a href="{{ post.url }}">{{ post.title }}</a></li>-->
     <article class="snippet">
       <div class="side">
         <span class="date-block">{{ post.date | date: "%b %-d %Y" }}</span>
       </div>
       <div class="body">
-        <header><h2 class="post-title no-border"><a href="{{ site.url }}/assets/{{ post.report_pdf }}">{{ post.title | escape }}</a></h2></header>
-        {{ post.content }}
+        <header><h2 class="post-title no-border"><a href="{{ post.url }}">{{ post.title | escape }}</a></h2></header>
+        {{ post.content | split:"<!--morestart-->" | last | split:"<!--more-->" | first }}
         <footer>
-          <a class="read-more" href="{{ site.url }}/assets/{{ post.report_pdf }}">View Report</a>
+          <a class="read-more" href="{{ post.url }}">Read more&#8230;</a>
         </footer>
       </div>
       <div class="clearfix"></div>
     </article>
   {% endfor %}
 </div>
-
+<!--home-->
